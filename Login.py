@@ -18,6 +18,7 @@ urlLogin = "http://192.168.243.133:80/vulnbank/online/api.php"
 datalogin = {"type": "user", "action": "login", "username": "j.doe", "password": "password"}
 login = s.post(urlLogin, data=datalogin)
 
+#send message to server
 from websocket import create_connection
 ws = create_connection("ws://127.0.0.1:8080/ws")
 conten1 = {'type':'message', 'msg':'Login Success'}
